@@ -13,7 +13,7 @@ import opt_model
 import runner
 
 # This corresponds to the main function
-input_data = InputData(
+input_data = data_ops.InputData(
     VARIABLES = ['x1', 'x2'],
     objective_coeff = {'x1': 30, 'x2': 20},
     constraints_coeff = {'x1': [0.6, 0.4], 'x2': [0.2, 0.8]},
@@ -25,19 +25,3 @@ problem = opt_model.OptModel(input_data)
 problem.run()
 problem.display_results()
 
-
-class InputData:
-
-    def __init__(
-        self, 
-        VARIABLES: list,
-        objective_coeff: list[str, int],    # Coefficients in objective function
-        constraints_coeff: list[str, int],  # Linear coefficients of constraints
-        constraints_rhs: list[str, int],    # Right hand side coefficients of constraints
-        constraints_sense: list[str, int],  # Direction of constraints
-    ):
-        self.VARIABLES = VARIABLES
-        self.objective_coeff = objective_coeff
-        self.constraints_coeff = constraints_coeff
-        self.constraints_rhs = constraints_rhs
-        self.constraints_sense = constraints_sense

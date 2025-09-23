@@ -3,10 +3,18 @@ import numpy as np
 import pandas as pd
 import gurobipy as gp
 import xarray as xr
+import main
 
 from src.data_ops import data_loader
 
 ### COPIED FROM INTRO, WAS "class LP_OptimizationProblem():"
+
+
+class Expando(object):
+    '''
+        A small class which can have attributes set
+    '''
+    pass
 class OptModel():
         """
     Placeholder for optimization models using Gurobipy.
@@ -68,3 +76,4 @@ def display_results(self):
         print(self.results.variables)
         print("Optimal dual values:")
         print(self.results.duals)
+        
