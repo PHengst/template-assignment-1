@@ -8,6 +8,10 @@ Suggested structure:
 - Prepare input data for a single simulation or multiple simulations.
 - Execute main function when the script is run directly.
 """
+import data_ops
+import opt_model
+import runner
+
 # This corresponds to the main function
 input_data = InputData(
     VARIABLES = ['x1', 'x2'],
@@ -16,7 +20,8 @@ input_data = InputData(
     constraints_rhs = [60, 100],
     constraints_sense =  [GRB.GREATER_EQUAL, GRB.GREATER_EQUAL],
 )
-problem = LP_OptimizationProblem(input_data)
+
+problem = opt_model.OptModel(input_data)
 problem.run()
 problem.display_results()
 
