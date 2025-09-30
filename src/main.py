@@ -8,6 +8,9 @@ Suggested structure:
 - Prepare input data for a single simulation or multiple simulations.
 - Execute main function when the script is run directly.
 """
+import gurobipy as gp
+from gurobipy import GRB
+
 import data_ops
 import opt_model
 import runner
