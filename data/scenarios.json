@@ -1,0 +1,62 @@
+[
+  {
+    "scenario": "Scenario 1: Flat cost structure",
+    "bus_ID": "Bus1",
+    "import_tariff_DKK/kWh": 0.5,
+    "export_tariff_DKK/kWh": 0.4,
+    "max_import_kW": 1000,
+    "max_export_kW": 500,
+    "penalty_excess_import_DKK/kWh": 10,
+    "penalty_excess_export_DKK/kWh": 10,
+    "energy_price_DKK_per_kWh": [
+      1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 
+      1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 
+      1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0
+    ]
+  },
+  {
+    "scenario": "Scenario 2: High export penalty",
+    "bus_ID": "Bus1",
+    "import_tariff_DKK/kWh": 0.5,
+    "export_tariff_DKK/kWh": 1.0,
+    "max_import_kW": 1000,
+    "max_export_kW": 500,
+    "penalty_excess_import_DKK/kWh": 10,
+    "penalty_excess_export_DKK/kWh": 10,
+    "energy_price_DKK_per_kWh": [
+      0.9, 0.8, 0.7, 0.6, 0.5, 0.7, 0.8, 1.0,
+      1.2, 1.5, 1.6, 1.3, 1.1, 1.0, 0.9, 1.1,
+      1.4, 1.8, 2.2, 2.5, 2.0, 1.7, 1.2, 1.0
+    ]
+  },
+  {
+    "scenario": "Scenario 3: Incentivize curtailment",
+    "bus_ID": "Bus1",
+    "import_tariff_DKK/kWh": 0.5,
+    "export_tariff_DKK/kWh": 0.4,
+    "max_import_kW": 1000,
+    "max_export_kW": 500,
+    "penalty_excess_import_DKK/kWh": 10,
+    "penalty_excess_export_DKK/kWh": 10,
+    "energy_price_DKK_per_kWh": [
+      -0.5, -0.4, -0.3, -0.1, -0.2, -0.2, -0.5, -0.8,
+      -1.0, -1.3, -1.5, -1.2, 0.8, 0.5, 0.2, -0.2,
+      0.3, 1.0, 1.8, 2.2, 1.9, 1.4, 0.8, 0.6
+    ]
+  },
+  {
+    "scenario": "Scenario 4: No tariffs",
+    "bus_ID": "Bus1",
+    "import_tariff_DKK/kWh": 0.0,
+    "export_tariff_DKK/kWh": 0.0,
+    "max_import_kW": 1000,
+    "max_export_kW": 500,
+    "penalty_excess_import_DKK/kWh": 10,
+    "penalty_excess_export_DKK/kWh": 10,
+    "energy_price_DKK_per_kWh": [
+      1.1, 1.05, 1.0, 0.9, 0.85, 1.01, 1.05, 1.2,
+      1.4, 1.6, 1.5, 1.1, 1.05, 1.0, 0.95, 1.0,
+      1.2, 1.5, 2.1, 2.5, 2.2, 1.8, 1.4, 1.2
+    ]
+  }
+]
